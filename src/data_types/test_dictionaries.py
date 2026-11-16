@@ -78,6 +78,7 @@ def test_dictionary():
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
 
+
 def test_dictionary_get_and_pop():
     """Dictionary get() and pop() methods."""
 
@@ -96,3 +97,20 @@ def test_dictionary_get_and_pop():
     # pop() removes the key from the dictionary and returns its value.
     assert ages.pop('bob') == 25
     assert 'bob' not in ages
+
+
+def test_dictionary_iteration():
+    """Looping over dictionary keys, values, and items."""
+
+    colors = {'cherry': 'red', 'banana': 'yellow'}
+
+    # keys(), values(), and items() return views in insertion order.
+    assert list(colors.keys()) == ['cherry', 'banana']
+    assert list(colors.values()) == ['red', 'yellow']
+
+    # items() gives (key, value) tuples, which you can unpack in a for loop.
+    pairs = []
+    for fruit, color in colors.items():
+        pairs.append(f'{fruit} is {color}')
+    assert pairs == ['cherry is red', 'banana is yellow']
+    
