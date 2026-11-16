@@ -77,3 +77,22 @@ def test_dictionary():
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
+
+def test_dictionary_get_and_pop():
+    """Dictionary get() and pop() methods."""
+
+    ages = {'alice': 30, 'bob': 25}
+
+    # get() returns the value for a key, like ages['alice'].
+    assert ages.get('alice') == 30
+
+    # Unlike ages['carol'], get() does not raise a KeyError when the key is missing.
+    # It returns None instead.
+    assert ages.get('carol') is None
+
+    # or a default value, if you pass one as the second argument.
+    assert ages.get('carol', 0) == 0
+
+    # pop() removes the key from the dictionary and returns its value.
+    assert ages.pop('bob') == 25
+    assert 'bob' not in ages
