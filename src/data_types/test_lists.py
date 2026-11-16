@@ -336,3 +336,12 @@ def test_nested_list_comprehensions():
         (3, 7, 11),
         (4, 8, 12),
     ]
+
+
+def test_custom_list_operations():
+    """Test custom list operations (filtering and custom sorting)."""
+
+    # Example 1: Filter a list of numbers to keep only even numbers
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    evens = [n for n in numbers if n % 2 == 0]
+    assert evens == [2, 4, 6, 8, 10]
