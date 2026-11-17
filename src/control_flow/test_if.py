@@ -26,3 +26,25 @@ def test_if_statement():
         conclusion = 'Number bigger than or equal to one'
 
     assert conclusion == 'Number bigger than or equal to one'
+
+# Example 1
+def test_nested_if_account_access():
+    """Check account access using nested conditions."""
+
+    cases = [
+        (True, True, 'Access granted'),
+        (True, False, 'Verify your account'),
+        (False, False, 'Create an account'),
+    ]
+
+    for has_account, is_verified, expected in cases:
+        if has_account:
+            if is_verified:
+                message = 'Access granted'
+            else:
+                message = 'Verify your account'
+        else:
+            message = 'Create an account'
+
+        assert message == expected
+
