@@ -129,3 +129,11 @@ def test_function_definition():
 
     assert calculate_rectangle_area(5, 3) == 15
     assert calculate_rectangle_area(4, 4) == 16
+
+    # Functions can define default parameter values.
+
+    def greet_with_default(name='Guest'):
+        return 'Hello, ' + name
+
+    assert greet_with_default() == 'Hello, Guest'
+    assert greet_with_default('Alice') == 'Hello, Alice'
