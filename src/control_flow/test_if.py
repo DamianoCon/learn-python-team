@@ -48,3 +48,27 @@ def test_nested_if_account_access():
 
         assert message == expected
 
+# Example 2
+def test_if_elif_temperature_categories():
+    """Check temperature categories and their boundaries."""
+
+    cases = [
+        (-5, 'Freezing'),
+        (0, 'Cold'),
+        (14, 'Cold'),
+        (15, 'Mild'),
+        (24, 'Mild'),
+        (25, 'Hot'),
+    ]
+
+    for temperature, expected in cases:
+        if temperature < 0:
+            category = 'Freezing'
+        elif temperature < 15:
+            category = 'Cold'
+        elif temperature < 25:
+            category = 'Mild'
+        else:
+            category = 'Hot'
+
+        assert category == expected
