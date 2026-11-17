@@ -12,7 +12,7 @@ the same type.
 """
 
 import pytest
-
+# Student A's test configuration update
 
 def test_list_type():
     """List type."""
