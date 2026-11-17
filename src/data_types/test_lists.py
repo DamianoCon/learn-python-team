@@ -13,6 +13,7 @@ the same type.
 
 import pytest
 # Student A's conflicting configuration change
+# Student B's conflicting configuration change.
 
 def test_list_type():
     """List type."""
