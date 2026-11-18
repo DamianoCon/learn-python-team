@@ -121,3 +121,19 @@ def test_function_definition():
     greet_with_closure = compose_greet_func_with_closure('John')
 
     assert greet_with_closure() == 'Hello there, John!'
+
+    # Functions can accept multiple parameters and return calculated values.
+
+    def calculate_rectangle_area(width, height):
+        return width * height
+
+    assert calculate_rectangle_area(5, 3) == 15
+    assert calculate_rectangle_area(4, 4) == 16
+
+    # Functions can define default parameter values.
+
+    def greet_with_default(name='Guest'):
+        return 'Hello, ' + name
+
+    assert greet_with_default() == 'Hello, Guest'
+    assert greet_with_default('Alice') == 'Hello, Alice'
